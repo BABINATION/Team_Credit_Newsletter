@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Credit Curtain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        /* Simple fade for image swaps */
+        .slideshow-image {
+            opacity: 1;
+            transition: opacity 0.8s ease-in-out;
+        }
+        .slideshow-image.fading-out {
+            opacity: 0;
+        }
+        /* Background stacked images */
+        .bg-photo {
+            filter: blur(6px);
+            opacity: 0.7;
+            transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
+        }
+        .bg-left {
+            transform: rotate(-3deg) scale(0.94);
+        }
+        .bg-right {
+            transform: rotate(3deg) scale(0.94);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+        <!-- Header using landing page color theme -->
+        <header class="bg-[#42db66] text-white p-8 sm:p-12 text-center rounded-b-[4rem]">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                <span class="text-[#ff0065]">Behind the Credit Curtain</span> 📸
+            </h1>
+            <p class="mt-2 text-xl font-light">
+                A look at the people behind the numbers!
+            </p>
+            <a href="newsletter_main_page.html" class="mt-4 inline-block bg-white text-gray-800 font-bold py-2 px-6 rounded-full shadow-lg transition-colors text-sm sm:text-base">
+                &larr; Back to Newsletter
+            </a>
+        </header>
+
+        <!-- Simple slideshow -->
+        <section class="p-6 sm:p-8">
+            <div class="relative rounded-2xl overflow-visible h-[70vh] sm:h-[78vh] flex items-center justify-center">
+                <!-- Previous and Next blurred background images -->
+                <img id="bgPrev" class="bg-photo bg-left absolute w-[92%] sm:w-[88%] h-[84%] object-cover rounded-xl shadow-xl -z-10" alt="Previous" src="pics/IMG-20240925-WA0000 (1).jpg">
+                <img id="bgNext" class="bg-photo bg-right absolute w-[92%] sm:w-[88%] h-[84%] object-cover rounded-xl shadow-xl -z-10" alt="Next" src="pics/untitled-0353 (1).JPG">
+                <!-- Main framed image -->
+                <div class="relative w-[94%] sm:w-[90%] h-[88%] bg-white rounded-xl shadow-2xl overflow-hidden">
+                    <img id="slideshowImage" class="slideshow-image absolute inset-0 w-full h-full object-contain bg-white" alt="Team memory" src="pics/christmas_tree.jpg">
+                </div>
+
+                <!-- Controls -->
+                <div class="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-3">
+                    <button id="prevBtn" class="bg-white/90 hover:bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-full shadow">Prev</button>
+                    <button id="nextBtn" class="bg-white/90 hover:bg-white text-gray-800 text-sm font-semibold px-4 py-2 rounded-full shadow">Next</button>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        (function() {
+            // Images from your pics folder
+            const images = [
+                'pics/christmas_tree.jpg',
+                'pics/TROPHIES.jpg',
+                'pics/IMG-20240925-WA0000 (1).jpg',
+                'pics/untitled-0353 (1).JPG',
+                'pics/IMG-20230325-WA0000__01.jpg',
+                'pics/Copy of image0.jpeg',
+                'pics/1734672736881.jpg',
+                'pics/1734672736856.jpg',
+                'pics/1734672115289.JPG',
+                'pics/20241213_164710 (1).jpg',
+                'pics/20241004_202502.jpg'
+            ];
+
+            // Preload
+            images.forEach(src => { const i = new Image(); i.src = src; });
+
+            const imgEl = document.getElementById('slideshowImage');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+
+            let idx = images.indexOf('pics/christmas_tree.jpg');
+            if (idx < 0) idx = 0;
+            let timer = null;
+
+            function show(index) {
+                const current = (index + images.length) % images.length;
+                const prev = (current - 1 + images.length) % images.length;
+                const next = (current + 1) % images.length;
+
+                const newSrc = images[current];
+                const prevSrc = images[prev];
+                const nextSrc = images[next];
+
+                if (newSrc === imgEl.getAttribute('src')) {
+                    // Still refresh background previews
+                    document.getElementById('bgPrev').setAttribute('src', prevSrc);
+                    document.getElementById('bgNext').setAttribute('src', nextSrc);
+                    return;
+                }
+
+                imgEl.classList.add('fading-out');
+                setTimeout(() => {
+                    imgEl.onload = () => {
+                        imgEl.classList.remove('fading-out');
+                        // Update blurred backgrounds after main is visible
+                        document.getElementById('bgPrev').setAttribute('src', prevSrc);
+                        document.getElementById('bgNext').setAttribute('src', nextSrc);
+                    };
+                    imgEl.setAttribute('src', newSrc);
+                }, 120);
+            }
+
+            function next() { idx = (idx + 1) % images.length; show(idx); }
+            function prev() { idx = (idx - 1 + images.length) % images.length; show(idx); }
+
+            function startAuto() {
+                stopAuto();
+                timer = setInterval(next, 5000); // 5s interval
+            }
+            function stopAuto() { if (timer) clearInterval(timer); }
+
+            nextBtn.addEventListener('click', function() { stopAuto(); next(); startAuto(); });
+            prevBtn.addEventListener('click', function() { stopAuto(); prev(); startAuto(); });
+
+            // Kickoff
+            startAuto();
+        })();
+    </script>
+</body>
+</html>

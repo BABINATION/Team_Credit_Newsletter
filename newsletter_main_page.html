@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Team Newsletter - Main</title>
+    <!-- Use Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .section-separator {
+            border-bottom: 2px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+        <!-- Header Section -->
+        <header class="bg-[#42db66] text-white p-8 sm:p-12 text-center rounded-b-[4rem]">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                <span class="text-[#ff0065]">Credit Team</span> Newsletter
+            </h1>
+
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="bg-gray-200 p-4 sm:p-6 text-center rounded-b-xl shadow-md">
+            <nav class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+                <a href="behind_the_curtain_page.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-colors text-sm sm:text-base">
+                    Behind the Credit Curtain 📸
+                </a>
+                <a href="meet_the_team_page.html" class="bg-[#ff0065] hover:bg-[#d00052] text-white font-bold py-2 px-6 rounded-full shadow-lg transition-colors text-sm sm:text-base">
+                    Meet the Team
+                </a>
+                <a href="older_newsletters_page.html" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-colors text-sm sm:text-base">
+                    Older Newsletters
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSza_p2HVBXQgNehmFSlMtI8WBhFRpyG2jf79X2AgyHP4ufg/viewform" target="_blank" rel="noopener" class="bg-gray-800 hover:bg-black text-white font-bold py-2 px-6 rounded-full shadow-lg transition-colors text-sm sm:text-base">
+                    Submission Zone
+                </a>
+            </nav>
+        </section>
+
+        <!-- Settlements Section -->
+        <section class="p-6 sm:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Our Numbers So Far</h2>
+            <p class="text-gray-600 mb-6">
+                As of 18 September 2025, our credit team has completed the following for FY 25/26:
+            
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                <div class="bg-[#42db66] rounded-xl p-4 text-white shadow-md">
+                    <span class="block text-2xl sm:text-3xl font-bold">602</span>
+                    <span class="block text-sm font-light uppercase">Assessments</span>
+                </div>
+                <div class="bg-[#00b0ff] rounded-xl p-4 text-white shadow-md">
+                    <span class="block text-2xl sm:text-3xl font-bold">416</span>
+                    <span class="block text-sm font-light uppercase">Prelims</span>
+                </div>
+                <div class="bg-[#ff0065] rounded-xl p-4 text-white shadow-md">
+                    <span class="block text-2xl sm:text-3xl font-bold">294</span>
+                    <span class="block text-sm font-light uppercase">Submissions</span>
+                </div>
+                <div class="bg-gray-500 rounded-xl p-4 text-white shadow-md">
+                    <span class="block text-2xl sm:text-3xl font-bold">214</span>
+                    <span class="block text-sm font-light uppercase">Approvals</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Body - Highlights Section -->
+        <section class="p-6 sm:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">
+                <span class="text-[#ff0065]">Credit Team Highlights:</span> Grit, Guts, and Great Outcomes!
+            </h2>
+            <p class="text-gray-600 mb-6">
+                Our Credit Analysts continue to go above and beyond for clients, solving complex scenarios, pushing through difficult cases, and making a meaningful difference. Here are some powerful wins shared by our team:
+            </p>
+
+            <!-- Silvia -->
+            <div id="silvia-story" class="story-card mb-8 p-6 bg-blue-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#00b0ff] mb-2">Silvia: Super Strategy & Leave Win</h3>
+                <p class="text-gray-700">
+                    AMP approval despite income complexity: Clients relied on rental and super income. Silvia leveraged Income Protection Payments and managed a tricky structure where AMP wouldn't accept OOP as security, so the equity was used to purchase OOP fully. The deal settled smoothly, and the clients were delighted.
+                    <br><br>
+                    Land loan success during bereavement leave: The client was on bereavement leave but had cleverly aligned Centrelink and annual leaves. Despite back-and-forth and near-loss of hope, Silvia pushed through and got the land loan settled.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#00b0ff]">Learning:</span> Creative structuring and emotional intelligence go a long way in tough deals.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="silvia">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="silvia-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Aishwarya -->
+            <div id="aishwarya-story" class="story-card mb-8 p-6 bg-green-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#42db66] mb-2">Aishwarya: Compassion in Action</h3>
+                <p class="text-gray-700">
+                    Client's emotional refinance journey: A long-term client, recently widowed, struggled with repayments. Despite poor credit, Aishwarya and Team Amine fought to retain the loan with AMP. With sensitivity and transparency, they consolidated debts, secured a competitive rate, and gave Rohit much-needed financial relief. He was deeply grateful—a story of compassion and commitment.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#42db66]">Learning:</span> Emotional intelligence is as important as credit skill in building trust with vulnerable clients.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="aishwarya">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="aishwarya-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Suraj -->
+            <div id="suraj-story" class="story-card mb-8 p-6 bg-red-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#ff0065] mb-2">Suraj: Crypto Crisis Averted</h3>
+                <p class="text-gray-700">
+                    Crypto recovery rescue: A client facing financial ruin due to crypto losses had one repayment left before default. Suraj structured a low-doc solution by extending the term and using equity. Multiple Live Chats, consistent follow-ups, and a creative structure saved the client's home.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#ff0065]">Learning:</span> Fast thinking and flexibility with product structures can save the day.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="suraj">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="suraj-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Sejal -->
+            <div id="sejal-story" class="story-card mb-8 p-6 bg-blue-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#00b0ff] mb-2">Sejal: Calm, Reliable, and Consistently Excellent</h3>
+                <p class="text-gray-700">
+                    Handling complex files during a period of major team transitions is no easy feat—but Sejal has done just that with unwavering quality and professionalism. She has navigated tricky scenarios with clarity, taken full ownership of outcomes, and maintained the highest standards throughout. One recent deal had several unexpected changes, but Sejal calmly managed each twist, earning glowing feedback from a very happy client.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#00b0ff]">Learning:</span> True excellence shows in how we handle pressure and Sejal continues to raise the bar with grace and consistency.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="sejal">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="sejal-likes">0</span>
+                </div>
+            </div>
+            
+            <!-- More stories like the above for each person... -->
+            <div id="urusha-story" class="story-card p-6 bg-green-50 rounded-xl shadow-lg mb-8 relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#42db66] mb-2">Urusha: Score Play Pays Off</h3>
+                <p class="text-gray-700">
+                    Credit score challenge solved: A client's Equifax score showed as 575, but the comprehensive score was 604. Urusha verified with AOL (which showed 815) and confidently submitted to Westpac, knowing they prioritize the comprehensive score. The deal sailed through without issue.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#42db66]">Learning:</span> Understanding lender preferences around credit scores can be the key to success.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="urusha">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="urusha-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Rabin -->
+            <div id="rabin-story" class="story-card p-6 bg-red-50 rounded-xl shadow-lg mb-8 relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#ff0065] mb-2">Rabin: Payday Cleanup Hero</h3>
+                <p class="text-gray-700">
+                    Breaking the payday loan cycle: A client was drowning in payday loans and at risk of losing their name. After multiple lender rejections and hardship complications, Rabin found a solution with VMG that required just one full mortgage repayment—no hardship exit needed. The deal settled, debts consolidated, and the client's monthly cash flow improved by $1800. A truly life-changing result.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#ff0065]">Learning:</span> Even the most complex hardship cases can be turned around with a strong lender match.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="rabin">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="rabin-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Rojina -->
+            <div id="rojina-story" class="story-card p-6 bg-blue-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#00b0ff] mb-2">Rojina: RSU Relay Victory</h3>
+                <p class="text-gray-700">
+                    RSU exception triumph: The client had no RSU income in 2023. After multiple exceptions with Macquarie, extensive follow-ups from Jan to Feb 2025, and policy changes mid-way, Rojina recalculated RSU income three times. She secured two RSU exceptions and a pre-approval despite missed documents—a huge win after months of persistence.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#00b0ff]">Learning:</span> Persistence and policy mastery make the difference in exception-heavy files.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="rojina">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="rojina-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Elisha -->
+            <div id="elisha-story" class="story-card p-6 bg-green-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#42db66] mb-2">Elisha: RSU Magic</h3>
+                <p class="text-gray-700">
+                    PCCU one-shot approval: A quick and clean submission that got approved on the first go—efficiency at its best!
+                    <br><br>
+                    RSU win: Finsit RSU income loan formally approved with Bankwest! Elisha reached out to higher credit for exception approval. The deal involved a refinance, equity release, and a pre-approval for investment, using a combination of salary RSU income bonus.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#42db66]">Learning:</span> Don't hesitate to escalate—proactive exception requests can secure big wins.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="elisha">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="elisha-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Gunjan -->
+            <div id="gunjan-story" class="story-card p-6 bg-red-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#ff0065] mb-2">Gunjan: SMSF Trust Masterclass</h3>
+                <p class="text-gray-700">
+                    SMSF loan approved through creative servicing: Got SMSF deal settled using recent payslip contributions even though it didn't meet the 12 month rule. Also supported a complex investment purchase under trust with expat guarantor, tweaking LODs to meet the client's legal needs—one-shot approval.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#ff0065]">Learning:</span> A deep grasp of servicing policies helps bend the rules ethically and effectively.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="gunjan">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="gunjan-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Sulav -->
+            <div id="sulav-story" class="story-card p-6 bg-blue-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#00b0ff] mb-2">Sulav: FHBG Win Under Pressure</h3>
+                <p class="text-gray-700">
+                    First Home Buyer FHBG deal with tight servicing: Navigated limited savings, ATO repayment adjustment, and NAB-only eligibility. The client secured approval and settled the property. Strong use of rent as genuine savings and problem-solving under pressure.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#00b0ff]">Learning:</span> Great results come from smart structuring and knowing exactly which lender fits the scenario best.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="sulav">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="sulav-likes">0</span>
+                </div>
+            </div>
+
+            <!-- Nikita -->
+            <div id="nikita-story" class="story-card p-6 bg-green-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#42db66] mb-2">Nikita: The Natural - Early Win, Big Impact</h3>
+                <p class="text-gray-700">
+                    On just her third file, Nikita handled a high-pressure FHBG deal involving credit score issues, limited savings, and complex background details. She managed everything end-to-end, leading to a formal approval just three days after submission.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#42db66]">Learning:</span> Confidence and ownership, even early on, can drive fast, successful outcomes.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="nikita">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="nikita-likes">0</span>
+                </div>
+            </div>
+            
+            <!-- Shradha -->
+            <div id="shradha-story" class="story-card p-6 bg-red-50 rounded-xl shadow-lg relative">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#ff0065] mb-2">Shradha: The Challenger and Change-Maker</h3>
+                <p class="text-gray-700">
+                    On top of supporting her team, Shradha has consistently demonstrated initiative by speaking up and challenging the status quo—a quality we deeply value. Her feedback throughout the year has led to tangible improvements, including changes within the TLH team and contributions to the ongoing salary and non-compete discussions. She also built a custom GPT tool—a refinance cost-benefit analyzer—showing how credit knowledge and tech can combine to improve decision-making.
+                </p>
+                <p class="mt-4 italic text-gray-500">
+                    <span class="font-bold text-[#ff0065]">Learning:</span> Speaking up drives progress, combining voice with vision makes real change happen.
+                </p>
+                <div class="mt-4 flex items-center gap-2">
+                    <button class="like-btn text-gray-500 hover:text-red-500 transition-colors" data-story-id="shradha">
+                        <span class="text-2xl">❤️</span>
+                    </button>
+                    <span class="like-count font-semibold text-gray-700" id="shradha-likes">0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Corner Section -->
+        <section class="p-6 sm:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center">Birthday Corner 🎉</h2>
+            <div class="bg-gray-50 rounded-xl p-6 shadow-lg text-center">
+                <p class="text-lg text-gray-700 font-semibold mb-2">Upcoming Birthdays</p>
+                <p class="text-gray-500 italic">This section will be updated with all our team's upcoming birthdays!</p>
+            </div>
+        </section>
+        
+        <!-- Rising Talent Section -->
+        <section class="p-6 sm:p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Rising Talent, Steady Hands: New Stars and General Team Support</h3>
+            <p class="text-gray-700 mb-4">
+                Our relatively new Credit Analysts are already making their mark. Sadina is quickly catching up with speed and delivering value to her broker team. She's secured approvals on complex foreign self-employed deals and even achieved a few one-shot approvals—a big milestone early on. Both Dikshyas have been consistent, confidently handling complex deals on their own, showing maturity and technical growth. The newest batch is also settling in fast and learning the ropes like pros. Shoutout to Smriti, Kristi, Anish, Elisha, Praish, and Pranisha—your curiosity and adaptability are commendable! And none of this would be possible without the support of the general credit team. Huge appreciation to everyone especially Prajwal and Sulav for handling workloads, supporting dedicated teams in need, coaching, guiding, and being strong anchors for the newcomers.
+            </p>
+        </section>
+
+        <footer class="text-center mt-12 pt-6 border-t-2 border-dashed border-gray-300">
+            <p class="text-lg font-semibold text-gray-700">
+                These wins reflect the talent, heart, and resilience of our amazing Credit Analyst team. These stories show how we're not just processing loans, we're changing lives.
+            </p>
+            <p class="text-gray-500 mt-2">
+                Thanks to every Credit Analyst for your resilience, creativity, and heart. Let's keep pushing boundaries!
+            </p>
+        </footer>
+    </div>
+    
+    <!-- JavaScript for interactive features -->
+    <script>
+        // --- DATA AND DOM ELEMENTS ---
+        const likeButtons = document.querySelectorAll('.like-btn');
+        const likeCounts = document.querySelectorAll('.like-count');
+
+        // --- FUNCTIONS ---
+        // Function to load like counts from localStorage
+        const loadLikes = () => {
+            likeCounts.forEach(countEl => {
+                const storyId = countEl.id.replace('-likes', '');
+                const storedLikes = localStorage.getItem(`likes-${storyId}`);
+                if (storedLikes) {
+                    countEl.textContent = storedLikes;
+                }
+            });
+        };
+
+        // Function to handle a like click
+        const handleLikeClick = (e) => {
+            const button = e.currentTarget;
+            const storyId = button.dataset.storyId;
+            const countEl = document.getElementById(`${storyId}-likes`);
+            
+            // Get current count, increment, and update UI
+            let currentLikes = parseInt(countEl.textContent, 10);
+            currentLikes++;
+            countEl.textContent = currentLikes;
+
+            // Save the updated count to localStorage
+            localStorage.setItem(`likes-${storyId}`, currentLikes);
+        };
+
+        // --- EVENT LISTENERS ---
+        likeButtons.forEach(button => {
+            button.addEventListener('click', handleLikeClick);
+        });
+
+        // --- INITIALIZATION ---
+        window.onload = () => {
+            loadLikes();
+        };
+    </script>
+</body>
+</html>
